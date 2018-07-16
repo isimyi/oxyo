@@ -1,0 +1,24 @@
+//- Все примеси в этом файле должны начинаться c имени блока (greeting)
+
+mixin greeting(text, src, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +greeting('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' greeting--' + modsList[i].trim();
+      }
+    }
+
+  .greeting(class=allMods)&attributes(attributes)
+    .greeting__text!= text
+    svg.greeting__icon
+      use(xlink:href=src)
