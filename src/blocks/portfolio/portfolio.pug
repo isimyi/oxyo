@@ -1,0 +1,28 @@
+//- Все примеси в этом файле должны начинаться c имени блока (portfolio)
+
+mixin portfolio-item(href, name, src, color, text, mods)
+
+  //- Принимает:
+  //-   href    {string} - ссылка на детальную страницу
+  //-   name    {string} - название работы
+  //-   src     {string} - изображение
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +portfolio('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' portfolio__item--' + modsList[i].trim();
+      }
+    }
+
+  a.portfolio__item(href=href class=allMods)&attributes(attributes)
+    img.portfolio__img(src=src alt=name)
+    .portfolio__descr(style='background-color:' + color)
+      .portfolio__name!= name
+      .portfolio__text!= text

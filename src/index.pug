@@ -6,8 +6,60 @@ block meta
 
 block header
   +page-header()
-    +greeting('Привет')
+    +greeting('Привет', 'img/sprite-svg.svg#icon-hand', true)
+    +main-nav()
+      +main-nav-item('about-us.html', 'Мы')
+      +main-nav-item('portfolio.html', 'Работа')
+      +main-nav-item('contacts.html', 'Контакты')
 
 block content
+  .promo(class=allMods)&attributes(attributes)
+    .promo__inner
+      h1.promo__title
+        span.promo__letter O
+        .
+          XYO
+      .promo__text
+        p Мы есть OXYO.
+        p Мы делаем&nbsp;
+          a(href='#') сайты
+          .
+            ,&nbsp;
+          a(href='#') стили
+          .
+            &nbsp;и&nbsp;
+          a(href='#') еще много чего
+        p Мы есть давно.
+      a.promo__lang(href='#') EN
 
+  div.deep.subtitle Если долго смотришь в&nbsp;
+    a.green(href='#') бездну
+    .
+      , она начинает смотреть в тебя
+
+
+  .portfolio
+    .portfolio__inner
+      .portfolio__items
+        +portfolio-item('/', 'Perfomance 360', 'img/portfolio-01.svg', '#007cff', 'Логотип, брендбук, стиль презентаций и ещё много чего для серии конференций по интернет-маркетингу.')
+        +portfolio-item('/', 'Морфлот', 'img/portfolio-02.svg', '#006dd6', 'Ребрендинг и модернизация фирменного стиля группы компаний - лидера судоремонтной отрасли России.')
+        +portfolio-item('/', 'Devision', 'img/portfolio-03.svg', '#ff5a00', 'Нейминг, логотип, брендбук, стиль, дизайн сайта и логотипы дочерних продуктов для разработчика программных продуктов')
+        +portfolio-item('/', 'Insite', 'img/portfolio-04.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+        +portfolio-item('/', 'Insite', 'img/portfolio-05.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+        +portfolio-item('/', 'Insite', 'img/portfolio-05.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+        +portfolio-item('/', 'Insite', 'img/portfolio-07.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+        +portfolio-item('/', 'Insite', 'img/portfolio-08.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+        +portfolio-item('/', 'Insite', 'img/portfolio-09.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+        +portfolio-item('/', 'Insite', 'img/portfolio-10.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+        +portfolio-item('/', 'Insite', 'img/portfolio-11.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+
+  div.blog.subtitle Хотите подписаться на&nbsp;наш
+    a.green(href='#') &nbsp;блог
+    .
+      ?
 block footer
+  footer.page-footer
+    .page-footer__inner
+      .page-footer__text OXYO
+        a.green(href='/') вечно
+

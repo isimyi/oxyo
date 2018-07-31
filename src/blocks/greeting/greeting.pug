@@ -1,12 +1,12 @@
 //- Все примеси в этом файле должны начинаться c имени блока (greeting)
 
-mixin greeting(text, src, mods)
+mixin greeting(title, src, isBtn, mods)
 
   //- Принимает:
   //-   text    {string} - текст
   //-   mods    {string} - список модификаторов
   //- Вызов:
-        +greeting('Текст', 'some-mod')
+        +greeting('Текст', 'some/src', true, 'some-mod')
 
   -
     // список модификаторов
@@ -18,7 +18,14 @@ mixin greeting(text, src, mods)
       }
     }
 
-  .greeting(class=allMods)&attributes(attributes)
-    .greeting__text!= text
-    svg.greeting__icon
-      use(xlink:href=src)
+  if (typeof(isBtn) !== 'undefined' && isBtn)
+    button.greeting(class=allMods)&attributes(attributes)
+      svg.greeting__icon
+        use(xlink:href!= src)
+      .greeting__title!= title
+
+  else
+    .greeting(class=allMods)&attributes(attributes)
+      svg.greeting__icon
+        use(xlink:href!= src)
+      .greeting__title!= title
