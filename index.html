@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta content="notranslate" name="google">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#5bbad5">
+  <meta name="theme-color" content="#000">
+  <meta name="msapplication-navbutton-color" content="#000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+  <title>Главная</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if (isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if (typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--' + key;
+            if (typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if (isMobile[key][type]) rootClasses += ' is-mobile--' + key + '-' + type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      } else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+</head>
+
+<body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
+  <div class="page__inner" id="page-inner">
+    <div class="page__content">
+      <header class="page-header page-header--absolute">
+        <div class="page-header__inner"><button class="greeting"><svg class="greeting__icon"><use xlink:href="img/sprite-svg.svg#icon-hand"></use></svg><div class="greeting__title">Привет</div></button>
+          <nav class="main-nav"><button class="main-nav__toggler"><span>Открыть главное меню</span><svg class="main-nav__icon"><use xlink:href="img/sprite-svg.svg#icon-menu"></use></svg></button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="about-us.html">Мы</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="portfolio.html">Работа</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div class="promo">
+          <div class="promo__inner">
+            <h1 class="promo__title visually-hidden">Студия OXYO</h1>
+            <svg class="promo__logo" viewBox="0 0 242.3 68.6">
+              <use xlink:href="img/sprite-svg.svg#icon-logo"></use>
+            </svg>
+            <div class="promo__text">
+              <p>Мы есть OXYO.</p>
+              <p>Мы делаем&#8194;<a class="green" href="#">сайты</a>,&#8194;<a class="green" href="#">стили</a>&#8194;и&nbsp;<a class="green" href="#">еще много чего</a>.</p>
+              <p>Мы есть давно.</p>
+            </div><a class="promo__lang" href="#">EN</a></div>
+        </div>
+        <div class="deep subtitle">Если долго смотришь в&nbsp;<a class="green" href="#">бездну</a>, она начинает смотреть в тебя
+
+        </div>
+        <div class="portfolio">
+          <div class="portfolio__inner">
+            <div class="portfolio__items"><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-01.svg" alt="Perfomance 360"/><div class="portfolio__descr" style="background-color:#007cff"><div class="portfolio__name">Perfomance 360</div><div class="portfolio__text">Логотип, брендбук, стиль презентаций и ещё много чего для серии конференций по интернет-маркетингу.</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-02.svg" alt="Морфлот"/><div class="portfolio__descr" style="background-color:#006dd6"><div class="portfolio__name">Морфлот</div><div class="portfolio__text">Ребрендинг и модернизация фирменного стиля группы компаний - лидера судоремонтной отрасли России.</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-03.svg" alt="Devision"/><div class="portfolio__descr" style="background-color:#ff5a00"><div class="portfolio__name">Devision</div><div class="portfolio__text">Нейминг, логотип, брендбук, стиль, дизайн сайта и логотипы дочерних продуктов для разработчика программных продуктов</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-04.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-05.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-05.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a><a class="portfolio__item  portfolio__item--large" href="/"><img class="portfolio__img" src="img/portfolio-07.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-08.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-09.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-10.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-11.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a></div>
+          </div>
+        </div>
+        <div class="blog subtitle">Хотите подписаться на&nbsp;наш<a class="green" href="#">&nbsp;блог</a>?
+        </div>
+        <div class="portfolio">
+          <div class="portfolio__inner">
+            <div class="portfolio__items"><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-12.svg" alt="Perfomance 360"/><div class="portfolio__descr" style="background-color:#007cff"><div class="portfolio__name">Perfomance 360</div><div class="portfolio__text">Логотип, брендбук, стиль презентаций и ещё много чего для серии конференций по интернет-маркетингу.</div></div></a><a class="portfolio__item  portfolio__item--large" href="/"><img class="portfolio__img" src="img/portfolio-13.svg" alt="Морфлот"/><div class="portfolio__descr" style="background-color:#006dd6"><div class="portfolio__name">Морфлот</div><div class="portfolio__text">Ребрендинг и модернизация фирменного стиля группы компаний - лидера судоремонтной отрасли России.</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-14.svg" alt="Devision"/><div class="portfolio__descr" style="background-color:#ff5a00"><div class="portfolio__name">Devision</div><div class="portfolio__text">Нейминг, логотип, брендбук, стиль, дизайн сайта и логотипы дочерних продуктов для разработчика программных продуктов</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-15.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-16.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-17.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-18.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-19.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a><a class="portfolio__item" href="/"><img class="portfolio__img" src="img/portfolio-20.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a><a class="portfolio__item  portfolio__item--large" href="/"><img class="portfolio__img" src="img/portfolio-21.svg" alt="Insite"/><div class="portfolio__descr" style="background-color:#46aaff"><div class="portfolio__name">Insite</div><div class="portfolio__text">Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.</div></div></a></div>
+          </div>
+        </div>
+        <div class="btns">
+          <div class="btns__inner"><a class="btn  btn--icon" id="show-more" href="#">Ещё<svg viewBox="0 0 91.1 93.9"><use xlink:href="img/sprite-svg.svg#icon-spades"></use></svg></a><a class="btn  btn--icon" id="contact-us" href="#">Себе<svg viewBox="0 0 91.1 81.2"><use xlink:href="img/sprite-svg.svg#icon-heart"></use></svg></a></div>
+        </div>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer">
+        <div class="page-footer__inner">
+          <div class="page-footer__text">OXYO&nbsp;<a class="green" href="/">вечно</a></div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>
