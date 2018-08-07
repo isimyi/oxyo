@@ -5,8 +5,27 @@
 .greeting {
 
   $block-name:                &; // #{$block-name}__element
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 0;
+  font-family: $font-family;
+  font-weight: 700;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (min-width: $screen-md) {
+    font-size: 20px;
+  }
 
   &__icon {
+    margin-right: 15px;
     width: 45px;
     height: 60px;
   }

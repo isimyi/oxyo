@@ -9,6 +9,8 @@
 @import './src/scss/functions.scss';
 @import './src/scss/variables.scss';
 @import './src/scss/mixins.scss';
+@import './src/scss/typo.scss';
+@import './src/scss/global.scss';
 @import './src/blocks/page/page.scss';
 @import './src/blocks/sprite-svg/sprite-svg.scss';
 @import './src/blocks/sprite-png/sprite-png.scss';
@@ -20,7 +22,13 @@
 @import './src/blocks/main-nav-toggler/main-nav-toggler.scss';
 @import './src/blocks/main-nav/main-nav.scss';
 @import './src/blocks/promo/promo.scss';
+@import './src/blocks/btn/btn.scss';
 @import './src/blocks/portfolio/portfolio.scss';
+@import './src/blocks/subtitle/subtitle.scss';
+@import './src/blocks/deep/deep.scss';
+@import './src/blocks/blog/blog.scss';
+@import './src/blocks/page-footer/page-footer.scss';
+@import './src/blocks/btns/btns.scss';
 @import './src/scss/print.scss';
 /*!*
  * ВНИМАНИЕ! Этот файл генерируется автоматически.

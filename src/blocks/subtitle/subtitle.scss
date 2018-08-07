@@ -1,0 +1,30 @@
+// В этом файле должны быть стили для БЭМ-блока subtitle, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.subtitle {
+
+  $block-name:                &; // #{$block-name}__element
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 32px;
+
+  @media (min-width: $screen-sm) {
+    font-size: 38px;
+  }
+
+  @media (min-width: $screen-md) {
+    font-size: 56px;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 86px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 100px;
+  }
+}

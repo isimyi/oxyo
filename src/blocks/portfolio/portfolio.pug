@@ -22,7 +22,7 @@ mixin portfolio-item(href, name, src, color, text, mods)
     }
 
   a.portfolio__item(href=href class=allMods)&attributes(attributes)
-    img.portfolio__img(src=src alt=name)
+    img.portfolio__img(src!= src alt!= name)
     .portfolio__descr(style='background-color:' + color)
       .portfolio__name!= name
       .portfolio__text!= text

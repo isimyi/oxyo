@@ -1,0 +1,19 @@
+// В этом файле должны быть стили для БЭМ-блока btns, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.btns {
+
+  $block-name:                &; // #{$block-name}__element
+  padding-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 100px;
+  }
+
+  &__inner {
+    @include container();
+    display: flex;
+    justify-content: center;
+  }
+}

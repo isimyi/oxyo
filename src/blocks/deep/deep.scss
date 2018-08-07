@@ -1,0 +1,22 @@
+// В этом файле должны быть стили для БЭМ-блока deep, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.deep {
+
+  $block-name:                &; // #{$block-name}__element
+  @include container();
+  padding-top: 30px;
+
+  @media (min-width: $screen-sm) {
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-bottom: 100px;
+  }
+}

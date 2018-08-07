@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока blog, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.blog {
+
+  $block-name:                &; // #{$block-name}__element
+  @include container();
+
+  @media (min-width: $screen-sm) {
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-bottom: 100px;
+  }
+}
