@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-  particlesJS("particles-js", {
+  var promoSection = document.getElementById('promo-inner');
+  var parallaxInstance = new Parallax(promoSection);
+
+  particlesJS("particles", {
     "particles": {
       "number": {
-        "value": 355,
+        "value": 555,
         "density": {
           "enable": true,
           "value_area": 789.1476416322727
@@ -28,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       "opacity": {
         "value": 0.48927153781200905,
-        "random": false,
+        "random": true,
         "anim": {
           "enable": true,
           "speed": 0.2,
@@ -55,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       "move": {
         "enable": true,
-        "speed": 0.2,
+        "speed": 0.5,
         "direction": "none",
         "random": true,
         "straight": false,
@@ -109,4 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     "retina_detect": true
   });
+
+
 });

@@ -15,24 +15,27 @@ block header
 
 block content
   .promo
-    .promo__inner
-      h1.promo__title.visually-hidden Студия OXYO
-      svg.promo__logo(viewBox='0 0 242.3 68.6')
-        use(xlink:href='img/sprite-svg.svg#icon-logo')
-      .promo__text
-        p Мы есть OXYO.
-        p Мы делаем&#8194;
-          a(href='#' class='green') сайты
-          .
-            ,&#8194;
-          a(href='#' class='green') стили
-          .
-            &#8194;и&nbsp;
-          a(href='#' class='green') еще много чего
-          .
+    .promo__inner#promo-inner
+      .promo__content(data-depth='0.0')
+        h1.promo__title.visually-hidden Студия OXYO
+        svg.promo__logo(viewBox='0 0 242.3 68.6')
+          use(xlink:href='img/sprite-svg.svg#icon-logo')
+        .promo__text
+          p Мы есть OXYO.
+          p Мы делаем&#8194;
+            a(href='#' class='green') сайты
             .
-        p Мы есть давно.
-      a.promo__lang(href='#') EN
+              ,&#8194;
+            a(href='#' class='green') стили
+            .
+              &#8194;и&nbsp;
+            a(href='#' class='green') еще много чего
+            .
+              .
+          p Мы есть давно.
+      .promo__planet-wrap(data-depth='0.4')
+        .promo__planet
+      a.promo__lang(href='#' data-depth='0.0') EN
 
   div.deep.subtitle Если долго смотришь в&nbsp;
     a.green(href='#') бездну
