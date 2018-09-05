@@ -27,6 +27,10 @@ document.addEventListener('DOMContentLoaded', function(){
           document.querySelector('.promo').classList.toggle('promo--blur');
           document.querySelector('.page-header').classList.toggle('page-header--blur');
 
+          $('.promo__logo').removeClass('promo__logo--hidden');
+          $('.promo__planet-wrap').removeClass('promo__planet-wrap--hidden');
+          $('.promo__text').removeClass('promo__text--visible');
+
         }
       }
     }

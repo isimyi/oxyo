@@ -5,6 +5,7 @@
 .greeting {
 
   $block-name:                &; // #{$block-name}__element
+  position: relative;
   display: flex;
   align-items: center;
   background: transparent;
@@ -15,6 +16,8 @@
   font-family: $font-family;
   font-weight: 700;
   padding: 0;
+  z-index: 10;
+  cursor: pointer;
 
   &:focus {
     outline: none;

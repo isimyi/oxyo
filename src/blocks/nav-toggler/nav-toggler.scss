@@ -16,9 +16,14 @@
   background: transparent;
   border: 0;
   outline: none;
+  cursor: pointer;
 
   &:focus {
     outline: none;
+  }
+
+  &--hidden {
+    pointer-events: none;
   }
 
   > div {
