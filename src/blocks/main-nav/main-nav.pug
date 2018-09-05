@@ -17,13 +17,8 @@ mixin main-nav(mods)
       }
     }
 
-  nav.main-nav(class=allMods)&attributes(attributes)
-    button.main-nav__toggler(class=allMods)&attributes(attributes)
-      span Открыть главное меню
-      svg.main-nav__icon
-        use(xlink:href='img/sprite-svg.svg#icon-menu')
-    ul.main-nav__list
-      block
+  nav.main-nav#main-nav(class=allMods)&attributes(attributes)
+    block
 
 mixin main-nav-item(href, text, mods)
 

@@ -76,10 +76,12 @@
   },
   "dependencies": {
     "ismobilejs": "^0.4.0",
+    "jquery": "^3.3.1",
     "normalize.css": "^8.0.0",
     "object-fit-images": "^3.2.3",
     "parallax-js": "^3.1.0",
     "particles.js": "^2.0.0",
+    "snapsvg": "^0.5.1",
     "svg4everybody": "^2.1.8"
   }
 }

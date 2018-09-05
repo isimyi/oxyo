@@ -3,92 +3,101 @@ extends pug/layout.pug
 block meta
   title Главная
   meta(name='description', content='')
+block page
+  .page__bg#particles
+  block header
+    header.page-header.page-header--absolute
+      .page-header__inner
+        +greeting('Привет', 'img/sprite-svg.svg#icon-hand', true)(id='home-greeting')
+        +nav-toggler('Показать главное меню', 'main-nav', 'main-nav--visible')
+        +main-nav()
+          #first-letter-clone
+          #letter-circle-clone
+          ul.main-nav__list
+            +main-nav-item('about-us.html', 'Мы')
+            +main-nav-item('portfolio.html', 'Работа')
+            +main-nav-item('contacts.html', 'Контакты')
 
-block header
-  header.page-header.page-header--absolute
-    .page-header__inner
-      +greeting('Привет', 'img/sprite-svg.svg#icon-hand', true)
-      +main-nav()
-        +main-nav-item('about-us.html', 'Мы')
-        +main-nav-item('portfolio.html', 'Работа')
-        +main-nav-item('contacts.html', 'Контакты')
-
-block content
-  .promo
-    .promo__inner#promo-inner
-      .promo__content(data-depth='0.0')
-        h1.promo__title.visually-hidden Студия OXYO
-        svg.promo__logo(viewBox='0 0 242.3 68.6')
-          use(xlink:href='img/sprite-svg.svg#icon-logo')
-        .promo__text
-          p Мы есть OXYO.
-          p Мы делаем&#8194;
-            a(href='#' class='green') сайты
-            .
-              ,&#8194;
-            a(href='#' class='green') стили
-            .
-              &#8194;и&nbsp;
-            a(href='#' class='green') еще много чего
-            .
+  block content
+    .promo
+      .promo__inner#promo-inner
+        .promo__content(data-depth='0.0')
+          h1.promo__title.visually-hidden Студия OXYO
+          svg.promo__logo#promo-logo(x="0px" y="0px" viewBox="0 0 242.3 68.6" xml:space="preserve")
+            path(class="logo-letter" d="M34.3,0C15.4,0,0,15.4,0,34.3c0,18.9,15.4,34.3,34.3,34.3c18.9,0,34.3-15.4,34.3-34.3C68.6,15.4,53.2,0,34.3,0z M34.3,54.1c-10.9,0-19.9-8.9-19.9-19.9c0-10.9,8.9-19.9,19.9-19.9c10.9,0,19.9,8.9,19.9,19.9C54.1,45.2,45.2,54.1,34.3,54.1z")
+            polygon(class="logo-blur" points="163.9,0.4 147.3,22.2 130.8,0.4 112.7,0.4 96.2,22.2 79.6,0.4 61.2,0.4 86.9,34.3 61.2,68.1 79.6,68.1 96.2,46.4 112.7,68.1 131.2,68.1 105.4,34.3 121.8,12.8 139.3,35.9 139.3,68.1 155.4,68.1 155.4,35.9 182.3,0.4 ")
+            path(class="logo-blur" d="M208,0c-18.9,0-34.3,15.4-34.3,34.3c0,18.9,15.4,34.3,34.3,34.3c18.9,0,34.3-15.4,34.3-34.3C242.3,15.4,226.9,0,208,0z M208,54.1c-10.9,0-19.9-8.9-19.9-19.9c0-10.9,8.9-19.9,19.9-19.9c10.9,0,19.9,8.9,19.9,19.9C227.8,45.2,218.9,54.1,208,54.1z")
+            circle(class="logo-circle" fill-opacity="0" cx="34.4" cy="34.3" r="20")
+          .promo__text
+            p Мы есть OXYO.
+            p Мы делаем&#8194;
+              a(href='#' class='green') сайты
               .
-          p Мы есть давно.
-      .promo__planet-wrap(data-depth='0.4')
-        .promo__planet
-      a.promo__lang(href='#' data-depth='0.0') EN
+                ,&#8194;
+              a(href='#' class='green') стили
+              .
+                &#8194;и&nbsp;
+              a(href='#' class='green') еще много чего
+              .
+                .
+            p Мы есть давно.
+        .promo__planet-wrap(data-depth='0.4')
+          img.promo__planet(src='img/planet.png')
+        .promo__lang
+          a.promo__lang-link(href='/') EN
 
-  div.deep.subtitle Если долго смотришь в&nbsp;
-    a.green(href='#') бездну
-    .
-      , она начинает смотреть в тебя
+    div.deep.subtitle Если долго смотришь в&nbsp;
+      a.green(href='#') бездну
+      .
+        , она начинает смотреть в тебя
 
 
-  .portfolio
-    .portfolio__inner
-      .portfolio__items
-        +portfolio-item('/', 'Perfomance 360', 'img/portfolio-01.svg', '#007cff', 'Логотип, брендбук, стиль презентаций и ещё много чего для серии конференций по интернет-маркетингу.')
-        +portfolio-item('/', 'Морфлот', 'img/portfolio-02.svg', '#006dd6', 'Ребрендинг и модернизация фирменного стиля группы компаний - лидера судоремонтной отрасли России.')
-        +portfolio-item('/', 'Devision', 'img/portfolio-03.svg', '#ff5a00', 'Нейминг, логотип, брендбук, стиль, дизайн сайта и логотипы дочерних продуктов для разработчика программных продуктов')
-        +portfolio-item('/', 'Insite', 'img/portfolio-04.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
-        +portfolio-item('/', 'Insite', 'img/portfolio-05.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
-        +portfolio-item('/', 'Insite', 'img/portfolio-05.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
-        +portfolio-item('/', 'Insite', 'img/portfolio-07.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.', 'large')
-        +portfolio-item('/', 'Insite', 'img/portfolio-08.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
-        +portfolio-item('/', 'Insite', 'img/portfolio-09.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
-        +portfolio-item('/', 'Insite', 'img/portfolio-10.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
-        +portfolio-item('/', 'Insite', 'img/portfolio-11.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+    .portfolio
+      .portfolio__inner
+        .portfolio__items
+          +portfolio-item('/', 'Perfomance 360', 'img/portfolio-01.svg', '#007cff', 'Логотип, брендбук, стиль презентаций и ещё много чего для серии конференций по интернет-маркетингу.')
+          +portfolio-item('/', 'Морфлот', 'img/portfolio-02.svg', '#006dd6', 'Ребрендинг и модернизация фирменного стиля группы компаний - лидера судоремонтной отрасли России.')
+          +portfolio-item('/', 'Devision', 'img/portfolio-03.svg', '#ff5a00', 'Нейминг, логотип, брендбук, стиль, дизайн сайта и логотипы дочерних продуктов для разработчика программных продуктов')
+          +portfolio-item('/', 'Insite', 'img/portfolio-04.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+          +portfolio-item('/', 'Insite', 'img/portfolio-05.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+          +portfolio-item('/', 'Insite', 'img/portfolio-05.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+          +portfolio-item('/', 'Insite', 'img/portfolio-07.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.', 'large')
+          +portfolio-item('/', 'Insite', 'img/portfolio-08.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+          +portfolio-item('/', 'Insite', 'img/portfolio-09.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+          +portfolio-item('/', 'Insite', 'img/portfolio-10.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+          +portfolio-item('/', 'Insite', 'img/portfolio-11.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
 
-  div.blog.subtitle Хотите подписаться на&nbsp;наш
-    a.green(href='#') &nbsp;блог
-    .
-      ?
+    div.blog.subtitle Хотите подписаться на&nbsp;наш
+      a.green(href='#') &nbsp;блог
+      .
+        ?
 
-  .portfolio
-    .portfolio__inner
-      .portfolio__items
-        +portfolio-item('/', 'Perfomance 360', 'img/portfolio-12.svg', '#007cff', 'Логотип, брендбук, стиль презентаций и ещё много чего для серии конференций по интернет-маркетингу.')
-        +portfolio-item('/', 'Морфлот', 'img/portfolio-13.svg', '#006dd6', 'Ребрендинг и модернизация фирменного стиля группы компаний - лидера судоремонтной отрасли России.', 'large')
-        +portfolio-item('/', 'Devision', 'img/portfolio-14.svg', '#ff5a00', 'Нейминг, логотип, брендбук, стиль, дизайн сайта и логотипы дочерних продуктов для разработчика программных продуктов')
-        +portfolio-item('/', 'Insite', 'img/portfolio-15.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
-        +portfolio-item('/', 'Insite', 'img/portfolio-16.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
-        +portfolio-item('/', 'Insite', 'img/portfolio-17.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
-        +portfolio-item('/', 'Insite', 'img/portfolio-18.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
-        +portfolio-item('/', 'Insite', 'img/portfolio-19.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
-        +portfolio-item('/', 'Insite', 'img/portfolio-20.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
-        +portfolio-item('/', 'Insite', 'img/portfolio-21.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.', 'large')
+    .portfolio
+      .portfolio__inner
+        .portfolio__items
+          +portfolio-item('/', 'Perfomance 360', 'img/portfolio-12.svg', '#007cff', 'Логотип, брендбук, стиль презентаций и ещё много чего для серии конференций по интернет-маркетингу.')
+          +portfolio-item('/', 'Морфлот', 'img/portfolio-13.svg', '#006dd6', 'Ребрендинг и модернизация фирменного стиля группы компаний - лидера судоремонтной отрасли России.', 'large')
+          +portfolio-item('/', 'Devision', 'img/portfolio-14.svg', '#ff5a00', 'Нейминг, логотип, брендбук, стиль, дизайн сайта и логотипы дочерних продуктов для разработчика программных продуктов')
+          +portfolio-item('/', 'Insite', 'img/portfolio-15.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+          +portfolio-item('/', 'Insite', 'img/portfolio-16.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+          +portfolio-item('/', 'Insite', 'img/portfolio-17.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+          +portfolio-item('/', 'Insite', 'img/portfolio-18.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+          +portfolio-item('/', 'Insite', 'img/portfolio-19.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+          +portfolio-item('/', 'Insite', 'img/portfolio-20.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
+          +portfolio-item('/', 'Insite', 'img/portfolio-21.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.', 'large')
 
-  .btns
-    .btns__inner
-      +btn('Ещё', 'icon')(id='show-more' href='#')
-        svg(viewBox='0 0 91.1 93.9')
-          use(xlink:href='img/sprite-svg.svg#icon-spades')
-      +btn('Себе', 'icon')(id='contact-us' href='#')
-        svg(viewBox='0 0 91.1 81.2')
-          use(xlink:href='img/sprite-svg.svg#icon-heart')
+    .btns
+      .btns__inner
+        +btn('Ещё', 'icon')(id='show-more' href='#')
+          svg(viewBox='0 0 91.1 93.9')
+            use(xlink:href='img/sprite-svg.svg#icon-spades')
+        +btn('Себе', 'icon')(id='contact-us' href='#')
+          svg(viewBox='0 0 91.1 81.2')
+            use(xlink:href='img/sprite-svg.svg#icon-heart')
 
-block footer
-  footer.page-footer
-    .page-footer__inner
-      .page-footer__text OXYO&nbsp;
-        a.green(href='/') вечно
+  block footer
+    footer.page-footer
+      .page-footer__inner
+        .page-footer__text OXYO&nbsp;
+          a.green(href='/') вечно
 

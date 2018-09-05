@@ -33,9 +33,9 @@ $screen-sm-max:               ($screen-md - 1);
 
 $container-sm:                100%;
 $container-md:                100%;
-$container-lg:                90%;
-$container-xl:                92%;
-$container-xxl:               92%;
+$container-lg:                960px;
+$container-xl:                1230px;
+$container-xxl:               1230px;
 
 
 // Модульная сетка
@@ -48,3 +48,4 @@ $grid-gutter-width:           28px;
 // Разное
 
 $z-index-modal:               100;
+$transition-time:             0.3s;

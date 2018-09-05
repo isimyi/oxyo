@@ -32,18 +32,19 @@ html(class='no-js  page', lang='ru')
       script
         include ../blocks/is-mobile/is-mobile--to-head.js
 
-  body#particles
+  body
     noscript У вас отключен JavaScript. Это пугает.
 
     .page__inner(id='page-inner')
       .page__content
-        block header
+        block page
+          block header
 
-        main
-          block content
+          main
+            block content
 
-      .page__footer-wrapper
-        block footer
+        .page__footer-wrapper
+          block footer
 
     block modals
 

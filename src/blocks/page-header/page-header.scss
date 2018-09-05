@@ -24,8 +24,16 @@
   }
 
   &__inner {
-    @include container();
+    @include container-fluid();
+    width: 100%;
     display: flex;
     align-items: center;
+  }
+
+  &--blur {
+
+    .greeting {
+      filter: blur(2px);
+    }
   }
 }

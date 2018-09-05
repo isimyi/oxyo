@@ -5,38 +5,128 @@
 .main-nav {
 
   $block-name:                &; // #{$block-name}__element
-  margin-left: auto;
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.95);
+  min-height: 500px;
+  height: 100vh;
 
-  &__toggler {
-    padding: 0;
-    font-size: 0;
-    border: 0;
-    background: transparent;
-    width: 40px;
-    height: 40px;
-
-    &:focus {
-      outline: 0;
-    }
+  @media (min-width: $screen-lg) {
+    min-height: 600px;
   }
 
-  &__icon {
-    width: 40px;
-    height: 40px;
+  @media (min-width: $screen-xxl) {
+    min-height: 700px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    min-height: 1080px;
   }
 
   &__list {
-    display: none;
-    padding-left: 0;
+    @include container-fluid();
+    padding-left: 40%;
     margin: 0;
     list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 40px;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 60px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 70px;
+      margin-bottom: 50px;
+    }
+
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '';
+      height: 2px;
+      width: 80px;
+      background: #fff;
+
+      @media (min-width: $screen-md) {
+        height: 4px;
+        width: 105px;
+      }
+    }
+
+    &:first-child {
+      padding-top: 0;
+
+      @media (min-width: $screen-md) {
+        padding-top: 0;
+      }
+
+      @media (min-width: $screen-lg) {
+        padding-top: 0;
+      }
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 0;
+      }
+
+      &:after {
+        left: 30px;
+
+        @media (min-width: $screen-xl) {
+          left: 50px;
+        }
+      }
+
+      &:before {
+        position: absolute;
+        left: 0;
+        bottom: 100%;
+        transform: translateY(50%);
+        content: 'и';
+        font-size: 27px;
+        color: #fff;
+        font-weight: 700;
+
+        @media (min-width: $screen-xl) {
+          font-size: 50px;
+        }
+      }
+
+    }
   }
 
   &__link {
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 28px;
     text-decoration: none;
+    transition: color $transition-time ease-in-out;
 
     @media (min-width: $screen-lg) {
       font-size: 60px;
@@ -44,6 +134,40 @@
 
     @media (min-width: $screen-xl) {
       font-size: 80px;
+    }
+
+    &:hover,
+    &:active {
+      color: $green;
+    }
+  }
+
+
+  @keyframes move {
+    0% { transform: translateX(0);}
+    100% { transform: translateX(120vw);}
+  }
+
+  #first-letter-clone {
+    position: absolute;
+    background: $green;
+    border-radius: 50%;
+    z-index: 10;
+  }
+
+  #letter-circle-clone {
+    position: absolute;
+    background: #000;
+    border-radius: 50%;
+    z-index: 20;
+  }
+
+  &--visible {
+    display: flex;
+
+    #letter-circle-clone {
+      animation: move 20s forwards ease-in-out;
+      animation-delay: 3s;
     }
   }
 }

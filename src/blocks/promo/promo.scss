@@ -6,16 +6,10 @@
 
   $block-name:                &; // #{$block-name}__element
   position: relative;
-  padding-top: 140px;
-  padding-bottom: 30px;
+  min-height: 500px;
   height: 100vh;
 
-  @media (min-width: $screen-md) {
-    padding-top: 160px;
-  }
-
   @media (min-width: $screen-lg) {
-    padding-top: 180px;
     min-height: 600px;
   }
 
@@ -25,6 +19,10 @@
 
   @media (min-width: $screen-xxl) {
     min-height: 1080px;
+  }
+
+  &--blur {
+    filter: blur(10px);
   }
 
   &__planet-wrap {
@@ -37,37 +35,60 @@
   &__planet {
     position: absolute;
     content: '';
-    top: 42% !important; // fix for parallax positioning
-    right: -5% !important;
-    background: url('../img/planet.png') top right no-repeat;
-    background-size: contain;
-    width: 23%;
-    height: 80%;
-    max-width: 457px;
-    max-height: 807px;
+    top: 95px;
+    right: 0;
+    min-width: 150px;
+    min-height: 150px;
+    width: 50vw;
+    height: 50vw;
+
+    @media (min-width: $screen-sm) {
+      top: 110px;
+      right: -5%;
+    }
+
+    @media (min-width: $screen-md) {
+      top: 150px;
+      right: -5%;
+    }
+
+    @media only screen and (orientation: landscape) {
+      top: 150px;
+      right: -20%;
+    }
+
+    @media (min-width: $screen-xl) {
+      top: 46%;
+      right: -40%;
+      width: 600px;
+      height: 600px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      width: 783px;
+      height: 783px;
+    }
   }
 
   &__inner {
-    @include container();
     height: 100%;
-    display: flex !important; // fix for parallax styles
+    display: flex;
     flex-direction: column;
   }
 
-  &__logo {
+  &__content {
+    @include container-fluid();
+    position: relative;
     display: block;
-    padding-top: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &__logo {
     max-width: 100%;
     width: 100%;
     height: auto;
-
-    @media (min-width: $screen-lg) {
-      padding-top: 2%;
-    }
-
-    //@media all and (orientation: landscape) {
-    //  padding-top: 0;
-    //}
+    fill: #fff;
   }
 
   &__text {
@@ -97,20 +118,26 @@
     };
   }
 
-  &__lang-wrap {
-    position: relative !important;
-    margin-top: auto;
-    margin-left: auto;
-    z-index: 50;
-  }
-
   &__lang {
-    position: relative !important;
+    @include container-fluid();
+    position: absolute;
+    top: auto !important;
+    bottom: 30px !important;
+    right: 0 !important;
     display: block;
     margin-top: auto;
     margin-left: auto;
+    text-align: right;
+    z-index: 10;
+
+    @media (min-width: $screen-md) {
+      bottom: 50px !important;
+    }
+  }
+
+  &__lang-link {
     font-size: 20px;
     font-weight: 700;
-    z-index: 100;
+    cursor: pointer;
   }
 }

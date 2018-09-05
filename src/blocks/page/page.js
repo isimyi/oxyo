@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var promoSection = document.getElementById('promo-inner');
-  var parallaxInstance = new Parallax(promoSection);
 
   particlesJS("particles", {
     "particles": {
@@ -112,6 +110,4 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     "retina_detect": true
   });
-
-
 });

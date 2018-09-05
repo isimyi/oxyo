@@ -84,6 +84,22 @@ $grid-gutter-width:           28px !default;
   }
 }
 
+@mixin container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+  width: 100%;
+
+  @media (min-width: $screen-lg) {
+    width: 90%;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 92%;
+  }
+}
+
 
 
 //------------------------------------------------------------------------------
