@@ -42,8 +42,6 @@ document.addEventListener('DOMContentLoaded', function(){
     return elementBottom > viewportTop && elementTop < viewportBottom;
   };
 
+  setInterval(blink, 10000);
 
-  if ($('#eye').isInViewport()) {
-    setInterval(blink, 10000);
-  }
 });

@@ -13,7 +13,10 @@
 
   &__inner {
     @include container();
-    display: flex;
-    justify-content: center;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: center;
+    }
   }
 }

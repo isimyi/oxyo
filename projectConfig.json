@@ -22,6 +22,7 @@
     "nav-toggler": []
   },
   "addCssBefore": [
+    "./../../node_modules/magic.css/magic.css",
     "./src/scss/functions.scss",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
@@ -39,7 +40,7 @@
     "./node_modules/ismobilejs/isMobile.min.js",
     "./node_modules/object-fit-images/dist/ofi.js",
     "./node_modules/particles.js/particles.js",
-    "./node_modules/parallax-js/dist/parallax.min.js"
+    "./node_modules/parallax-js/dist/parallax.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

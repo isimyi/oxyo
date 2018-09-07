@@ -36,6 +36,16 @@
     font-weight: 700;
     font-size: 26px;
 
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+
     @media (min-width: $screen-sm) {
       font-size: 34px;
     }
@@ -48,25 +58,58 @@
       font-size: 80px;
     }
 
-    &:first-child {
-      position: relative;
-
-      &:after {
-        content: ' \00a0 /\00a0';
-      }
-    }
-
     > svg {
       display: inline-block;
       vertical-align: middle;
       width: 50px;
       margin-left: 20px;
+      fill: #000;
+      transition: all 0.3s ease-in-out;
 
       @media (min-width: $screen-lg) {
         width: 100px;
         margin-left: 27px;
       }
     }
+  }
+}
 
+#show-more {
+  position: relative;
+  display: block;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 35px;
+
+  &:hover,
+  &:active {
+
+    > svg {
+      fill: #fff;
+    }
+  }
+
+  &:after {
+    display: none;
+    content: ' \00a0 /\00a0';
+    font-size: 76px;
+    font-weight: 300;
+
+    @media (min-width: $screen-md) {
+      display: inline-block;
+    }
+  }
+}
+
+#contact-us {
+  position: relative;
+  display: block;
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:active {
+
+    > svg {
+      fill: #FF0000;
+    }
   }
 }

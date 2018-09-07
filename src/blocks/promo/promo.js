@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function () {
+$(document).ready(function () {
   var promoSection = document.getElementById('promo-inner');
   var parallaxInstance = new Parallax(promoSection);
   var firstLetter = $('.logo-letter');
   var firstLetterWidth = firstLetter[0].getBoundingClientRect().width;
   var firstLetterHeight = firstLetter[0].getBoundingClientRect().height;
-  var firstLetterPosition = firstLetter.offset();
+  var firstLetterPosition = $('.promo__logo').offset();
   var letterCircle = $('.logo-circle');
   var letterCircleWidth = letterCircle[0].getBoundingClientRect().width;
   var letterCircleHeight = letterCircle[0].getBoundingClientRect().height;
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
     'width': letterCircleWidth,
     'height': letterCircleHeight
   });
-  $('#letter-circle-clone').css(letterCirclePosition);
 
   $(window).resize(function () {
     firstLetterWidth = firstLetter[0].getBoundingClientRect().width;
@@ -47,5 +46,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     $('#letter-circle-clone').css(letterCirclePosition);
   });
-
 });

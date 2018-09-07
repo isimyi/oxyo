@@ -145,7 +145,7 @@
 
 
   @keyframes move {
-    0% { transform: translateX(0);}
+    0% { transform: translate(-50%, -50%);}
     100% { transform: translateX(120vw);}
   }
 
@@ -158,6 +158,9 @@
 
   #letter-circle-clone {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: #000;
     border-radius: 50%;
     z-index: 20;

@@ -17,12 +17,12 @@ mixin portfolio-item(href, name, src, color, text, mods)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' portfolio__item--' + modsList[i].trim();
+        allMods = allMods + ' portfolio__item-wrap--' + modsList[i].trim();
       }
     }
 
-  .portfolio__item-wrap
-    a.portfolio__item(href=href class=allMods)&attributes(attributes)
+  .portfolio__item-wrap(class=allMods)
+    a.portfolio__item(href=href)&attributes(attributes)
       img.portfolio__img(src!= src alt!= name)
       .portfolio__descr(style='background-color:' + color)
         .portfolio__name!= name
