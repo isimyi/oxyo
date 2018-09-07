@@ -16,6 +16,7 @@
   z-index: 10;
   background: rgba(0, 0, 0, 0.95);
   min-height: 500px;
+  opacity: 0;
   height: 100vh;
 
   @media (min-width: $screen-lg) {
@@ -164,6 +165,7 @@
 
   &--visible {
     display: flex;
+    opacity: 1;
 
     #letter-circle-clone {
       animation: move 20s forwards ease-in-out;
