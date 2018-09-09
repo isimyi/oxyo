@@ -54,7 +54,7 @@
       font-size: 46px;
     }
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-lg) {
       font-size: 80px;
     }
 
@@ -72,6 +72,47 @@
       }
     }
   }
+
+  &--icon-revert {
+    font-weight: 700;
+    font-size: 26px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+
+    @media (min-width: $screen-sm) {
+      font-size: 34px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 46px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 80px;
+    }
+
+    > svg {
+      display: inline-block;
+      vertical-align: middle;
+      width: 50px;
+      margin-right: 20px;
+      fill: #000;
+      transition: all 0.3s ease-in-out;
+
+      @media (min-width: $screen-lg) {
+        width: 100px;
+        margin-right: 27px;
+      }
+    }
+  }
 }
 
 #show-more {
@@ -79,6 +120,15 @@
   display: block;
   transition: all 0.3s ease-in-out;
   margin-bottom: 35px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 0;
+    margin-right: 100px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-right: 125px;
+  }
 
   &:hover,
   &:active {
@@ -90,12 +140,24 @@
 
   &:after {
     display: none;
-    content: ' \00a0 /\00a0';
+    position: absolute;
+    content: '/';
+    top: 50%;
+    right: -70px;
+    transform: translateY(-50%);
     font-size: 76px;
     font-weight: 300;
 
     @media (min-width: $screen-md) {
       display: inline-block;
+      vertical-align: middle;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 136px;
+      right: -100px;
+
+
     }
   }
 }

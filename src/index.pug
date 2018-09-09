@@ -66,10 +66,16 @@ block page
           +portfolio-item('/', 'Insite', 'img/portfolio-10.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
           +portfolio-item('/', 'Insite', 'img/portfolio-11.svg', '#46aaff', 'Логотип, брендбук, стиль и оформление презентации для крупного облачного хостера.')
 
-    div.blog.subtitle Хотите подписаться на&nbsp;наш
-      a.green(href='#') &nbsp;блог
-      .
-        ?
+    div.blog.subtitle
+      .blog__text Хотите подписаться на&nbsp;наш
+        a.blog__link.green(href='#') &nbsp;блог
+        .
+          ?
+      .blog__message Очень жаль, потому что у&nbsp;нас&nbsp;
+        a.blog__link.green(href='#') его нет
+        svg.blog__icon
+          use(xlink:href='img/sprite-svg.svg#icon-mouth')
+
 
     .portfolio
       .portfolio__inner
@@ -90,9 +96,10 @@ block page
         +btn('Ещё', 'icon')(id='show-more' href='#')
           svg(viewBox='0 0 91.1 93.9')
             use(xlink:href='img/sprite-svg.svg#icon-spades')
-        +btn('Себе', 'icon')(id='contact-us' href='#')
+        +btn('', 'icon-revert')(id='contact-us' href='#')
           svg(viewBox='0 0 91.1 81.2')
             use(xlink:href='img/sprite-svg.svg#icon-heart')
+          span Себе
 
   block footer
     footer.page-footer

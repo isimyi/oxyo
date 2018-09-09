@@ -17,6 +17,7 @@ $(document).ready(function () {
     'width': firstLetterWidth,
     'height': firstLetterHeight
   });
+
   $('#first-letter-clone').css(firstLetterPosition);
 
   $('#letter-circle-clone').css({
@@ -44,6 +45,5 @@ $(document).ready(function () {
       'width': letterCircleWidth,
       'height': letterCircleHeight
     });
-    $('#letter-circle-clone').css(letterCirclePosition);
   });
 });

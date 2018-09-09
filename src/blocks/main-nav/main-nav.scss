@@ -5,8 +5,8 @@
 .main-nav {
 
   $block-name:                &; // #{$block-name}__element
-  display: none;
   position: absolute;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100vw;
@@ -16,8 +16,12 @@
   z-index: 10;
   background: rgba(0, 0, 0, 0.95);
   min-height: 500px;
-  opacity: 0;
   height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: opacity, visibility;
+  transition-duration: .4s, 0s;
+  transition-delay: 0s, .4s;
 
   @media (min-width: $screen-lg) {
     min-height: 600px;
@@ -167,8 +171,9 @@
   }
 
   &--visible {
-    display: flex;
+    visibility: visible;
     opacity: 1;
+    transition-delay: 0s, 0s;
 
     #letter-circle-clone {
       animation: move 20s forwards ease-in-out;
