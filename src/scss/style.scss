@@ -7,6 +7,7 @@
  */
 
 @import './../../node_modules/magic.css/magic.css';
+@import './../../node_modules/magnific-popup/dist/magnific-popup.css';
 @import './src/scss/functions.scss';
 @import './src/scss/variables.scss';
 @import './src/scss/mixins.scss';
@@ -30,6 +31,9 @@
 @import './src/blocks/page-footer/page-footer.scss';
 @import './src/blocks/btns/btns.scss';
 @import './src/blocks/nav-toggler/nav-toggler.scss';
+@import './src/blocks/modal/modal.scss';
+@import './src/blocks/contact-form/contact-form.scss';
+@import './src/blocks/field-text/field-text.scss';
 @import './src/scss/print.scss';
 /*!*
  * ВНИМАНИЕ! Этот файл генерируется автоматически.

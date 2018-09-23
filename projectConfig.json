@@ -19,10 +19,14 @@
     "blog": [],
     "page-footer": [],
     "btns": [],
-    "nav-toggler": []
+    "nav-toggler": [],
+    "modal": [],
+    "contact-form": [],
+    "field-text": []
   },
   "addCssBefore": [
     "./../../node_modules/magic.css/magic.css",
+    "./../../node_modules/magnific-popup/dist/magnific-popup.css",
     "./src/scss/functions.scss",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
@@ -40,7 +44,8 @@
     "./node_modules/ismobilejs/isMobile.min.js",
     "./node_modules/object-fit-images/dist/ofi.js",
     "./node_modules/particles.js/particles.js",
-    "./node_modules/parallax-js/dist/parallax.js"
+    "./node_modules/parallax-js/dist/parallax.js",
+    "./node_modules/magnific-popup/dist/jquery.magnific-popup.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

@@ -93,10 +93,10 @@ block page
 
     .btns
       .btns__inner
-        +btn('Ещё', 'icon')(id='show-more' href='#')
+        +btn('Ещё', 'icon')(id='show-more' href='/')
           svg(viewBox='0 0 91.1 93.9')
             use(xlink:href='img/sprite-svg.svg#icon-spades')
-        +btn('', 'icon-revert')(id='contact-us' href='#')
+        +btn('', 'icon-revert')(class='modal-link' id='contact-us' href='#contact-modal')
           svg(viewBox='0 0 91.1 81.2')
             use(xlink:href='img/sprite-svg.svg#icon-heart')
           span Себе
@@ -106,3 +106,32 @@ block page
       .page-footer__inner
         .page-footer__text OXYO&nbsp;
           a.green(href='/') вечно
+
+  +modal('contact-modal')
+    h4.modal__title.modal__title--ufo Ульракороткая, но&nbsp;мегаконверсионная форма захвата
+    +contact-form()
+      fieldset.contact-form__fields
+        +field-text({
+          mods: '',
+          val: '',
+          attrs: {
+            name: 'user-name',
+            placeholder: 'Представьтесь'
+          }
+        })
+        +field-text({
+          mods: '',
+          val: '',
+          attrs: {
+            name: 'phone',
+            placeholder: 'Телефон'
+          }
+        })
+        p.contact-form__note Нажимая на «ПУСК», вы соглашаетесь на&nbsp;обработку&nbsp;
+          a.green(href='/') персональных данных.
+          br
+          .
+            А можно ни на что не соглашаться, ничего не заполнять и&nbsp;просто написать нам в&nbsp;
+          a.green.bold(href='/') телеграм
+      .contact-form__submit
+        +btn('Пуск', 'round', true)

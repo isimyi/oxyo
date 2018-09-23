@@ -14,3 +14,11 @@
 .green {
   color: $green;
 }
+
+.bold {
+  font-weight: 700;
+}
+
+.blurred {
+  filter: blur(5px);
+}

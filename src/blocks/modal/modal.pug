@@ -1,0 +1,26 @@
+//- Все примеси в этом файле должны начинаться c имени блока (modal)
+mixin modal(id, mods)
+
+  //- Принимает:
+  //-   id      {string} - идентификатор
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +modal('modal-demo-01', 'some')
+          .modal__body
+            p Текст
+          .modal__footer
+            button.btn(type='button', data-dismiss='modal') Закрыть
+  -
+    // список модификаторов
+    var allMods = '';
+
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' modal--' + modsList[i].trim();
+      }
+    }
+
+  .modal.mfp-hide(id=id, class=allMods, tabindex='-1', role='dialog')&attributes(attributes)
+    .modal__dialog(role='document')
+      block

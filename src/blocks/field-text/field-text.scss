@@ -2,88 +2,34 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-$gray-lighter:                hsl(0, 0%, 80%) !default;
-$border-color:                hsl(0, 0%, 60%) !default;
-
-$text-color--muted:           hsl(0, 0%, 50%) !default;
-
-$line-height:                 1.5 !default;
-
-$field-padding-vertical:      0.3em !default;
-$field-padding-horizontal:    0.7em !default;
-
-$border-radius:               rem(3px) !default;
-
 .field-text {
 
   $block-name:                &; // #{$block-name}__element
-
   display: block;
-  margin-bottom: 1rem;
-
-  &__name {
-    @include field-name;
-  }
-
-  &__input-wrap {
-    display: block;
-  }
+  width: 100%;
 
   &__input {
-    display: inline-block;
-    vertical-align: middle;
+    padding: 15px 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #fff;
     width: 100%;
-    // height: 2.125em;
-    padding: $field-padding-vertical  $field-padding-horizontal;
-    margin: 0;
-    line-height: $line-height;
-    font-size: 1em;
-    font-family: inherit;
-    background-color: #fff;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
-    appearance: textfield;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
 
-    &:focus {
-      @include field-focus;
+    @media (min-width: $screen-md) {
+      font-size: 24px;
     }
 
-    &[disabled],
-    &[readonly] {
-      cursor: default;
-      background-color: $gray-lighter;
-    }
-
-    &[type='search']::-webkit-search-cancel-button,
-    &[type='search']::-webkit-search-decoration {
-      -webkit-appearance: none; // stylelint-disable-line  property-no-vendor-prefix
-    }
-
-    &[type='number']::-webkit-inner-spin-button,
-    &[type='number']::-webkit-outer-spin-button {
-      // height: auto;
-    }
-
-    &[type='color'] {
-      // max-width: 100px;
-      padding: 0;
+    @media (min-width: $screen-lg) {
+      font-size: 30px;
     }
 
     &::placeholder {
-      color: $text-color--muted;
-      opacity: 1;
-    }
-
-    @at-root textarea#{&} {
-      $textarea-height: ($line-height * 2) + ($field-padding-vertical * 2);
-
-      height: auto;
-      min-height: calc(#{$textarea-height} + 2px);
-      resize: vertical;
+      color: #fff;
     }
   }
 
-  &__help-text {
-    @include field-help-text;
-  }
 }

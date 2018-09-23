@@ -1,0 +1,87 @@
+// В этом файле должны быть стили для БЭМ-блока modal, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.modal {
+
+  $block-name:                &; // #{$block-name}__element
+  @include container();
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 65px;
+  }
+
+  &__dialog {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1075px;
+
+    @media (min-width: $screen-xl) {
+      padding-right: 105px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 36px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+
+    @media (min-width: $screen-md) {
+      font-size: 40px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 56px;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 60px;
+    }
+
+    &--ufo {
+      position: relative;
+
+      @media (min-width: $screen-md) {
+        padding-left: 210px;
+      }
+
+      &:before {
+        display: none;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+        height: 150px;
+        background: url('../img/icon-ufo.svg') center center no-repeat;
+        background-size: contain;
+
+        @media (min-width: $screen-md) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  //
+  // Custom styles for Magnific Popup plugin
+  //
+
+  .mfp-close {
+    top: 10px;
+    color: #fff;
+    opacity: 1;
+    font-family: $font-family;
+    font-size: 80px;
+    font-weight: 300;
+
+    @media (min-width: $screen-lg) {
+      font-size: 100px;
+    }
+  }
+}

@@ -113,6 +113,31 @@
       }
     }
   }
+
+  &--round {
+    padding: 5px;
+    width: 145px;
+    height: 145px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: transparent;
+    color: $green;
+    border: 7px solid $green;
+    border-radius: 50%;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media (min-width: $screen-md) {
+      font-size: 36px;
+    }
+
+    &:hover,
+    &:active {
+      color: #000;
+      background: $green;
+    }
+  }
 }
 
 #show-more {

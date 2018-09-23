@@ -100,30 +100,30 @@
       .portfolio__item {
 
         @media (min-width: $screen-lg) {
-          width: 600px;
+          width: 400px;
         }
 
         @media (min-width: $screen-xl) {
-          width: 680px;
+          width: 450px;
         }
       }
 
       .portfolio__descr {
 
         @media (min-width: $screen-lg) {
-          height: 600px;
+          height: 400px;
         }
 
         @media (min-width: $screen-xl) {
-          height: 680px;
+          height: 450px;
         }
       }
 
       .portfolio__img {
-        max-width: 80%;
+        max-width: 90%;
 
         @media (min-width: $screen-xl) {
-          max-width: 65%;
+          max-width: 90%;
         }
       }
     }
