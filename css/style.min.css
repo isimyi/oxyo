@@ -3362,12 +3362,12 @@ canvas {
   display: block;
   vertical-align: bottom; }
 .temp-icon-left-arrow {
-  background-image: url(../img/sprite-04875769428780976.png);
+  background-image: url(../img/sprite-01670311364365029.png);
   background-position: 0px 0px;
   width: 32px;
   height: 32px; }
 .temp-icon-right-arrow {
-  background-image: url(../img/sprite-04875769428780976.png);
+  background-image: url(../img/sprite-01670311364365029.png);
   background-position: -36px 0px;
   width: 32px;
   height: 32px; }
@@ -4305,6 +4305,8 @@ canvas {
       width: 960px; }
     .modal {
       padding-top: 65px; }
+      .modal__dialog {
+        padding-right: 80px; }
       .modal__title {
         font-size: 56px; }
       .modal .mfp-close {
