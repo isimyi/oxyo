@@ -19,6 +19,10 @@
     margin-right: auto;
     max-width: 1075px;
 
+    @media (min-width: $screen-lg) {
+      padding-right: 80px;
+    }
+
     @media (min-width: $screen-xl) {
       padding-right: 105px;
     }
