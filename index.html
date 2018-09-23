@@ -129,8 +129,8 @@
         </div>
       </div>
       <div class="btns">
-        <div class="btns__inner"><a class="btn  btn--icon" id="show-more" href="#">Ещё<svg viewBox="0 0 91.1 93.9"><use xlink:href="img/sprite-svg.svg#icon-spades"></use></svg></a>
-          <a class="btn  btn--icon-revert" id="contact-us" href="#">
+        <div class="btns__inner"><a class="btn  btn--icon" id="show-more" href="/">Ещё<svg viewBox="0 0 91.1 93.9"><use xlink:href="img/sprite-svg.svg#icon-spades"></use></svg></a>
+          <a class="btn  btn--icon-revert modal-link" id="contact-us" href="#contact-modal">
             <svg viewBox="0 0 91.1 81.2">
               <use xlink:href="img/sprite-svg.svg#icon-heart"></use>
             </svg><span>Себе</span></a>
@@ -141,6 +141,17 @@
           <div class="page-footer__text">OXYO&nbsp;<a class="green" href="/">вечно</a></div>
         </div>
       </footer>
+      <div class="modal mfp-hide" id="contact-modal" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <h4 class="modal__title modal__title--ufo">Ульракороткая, но&nbsp;мегаконверсионная форма захвата</h4>
+          <form class="contact-form">
+            <fieldset class="contact-form__fields"><label class="field-text"><span class="field-text__input-wrap"><input class="field-text__input" type="text" value="" name="user-name" placeholder="Представьтесь"/></span></label><label class="field-text"><span class="field-text__input-wrap"><input class="field-text__input" type="text" value="" name="phone" placeholder="Телефон"/></span></label>
+              <p class="contact-form__note">Нажимая на «ПУСК», вы соглашаетесь на&nbsp;обработку&nbsp;<a class="green" href="/">персональных данных.</a><br>А можно ни на что не соглашаться, ничего не заполнять и&nbsp;просто написать нам в&nbsp;<a class="green bold" href="/">телеграм</a></p>
+            </fieldset>
+            <div class="contact-form__submit"><input class="btn  btn--round" value="Пуск" type="button" /></div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
   <script src="js/script.min.js"></script>
