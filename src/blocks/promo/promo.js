@@ -1,49 +1,54 @@
 $(document).ready(function () {
-  var promoSection = document.getElementById('promo-inner');
-  var parallaxInstance = new Parallax(promoSection);
-  var firstLetter = $('.logo-letter');
-  var firstLetterWidth = firstLetter[0].getBoundingClientRect().width;
-  var firstLetterHeight = firstLetter[0].getBoundingClientRect().height;
-  var firstLetterPosition = $('.promo__logo').offset();
-  var letterCircle = $('.logo-circle');
-  var letterCircleWidth = letterCircle[0].getBoundingClientRect().width;
-  var letterCircleHeight = letterCircle[0].getBoundingClientRect().height;
-  var letterCirclePosition = letterCircle.offset();
-  var planet = $('.promo__planet');
+    var promoSection = document.getElementById('promo-inner');
 
-  planet.css('top', firstLetterPosition.top + (firstLetterHeight / 3));
+    if (typeof(promoSection) != 'undefined' && promoSection != null) {
+        var parallaxInstance = new Parallax(promoSection);
+        var firstLetter = $('.logo-letter');
+        var firstLetterWidth = firstLetter[0].getBoundingClientRect().width;
+        var firstLetterHeight = firstLetter[0].getBoundingClientRect().height;
+        var firstLetterPosition = $('.promo__logo').offset();
+        var letterCircle = $('.logo-circle');
+        var letterCircleWidth = letterCircle[0].getBoundingClientRect().width;
+        var letterCircleHeight = letterCircle[0].getBoundingClientRect().height;
+        var letterCirclePosition = letterCircle.offset();
+        var planet = $('.promo__planet');
 
-  $('#first-letter-clone').css({
-    'width': firstLetterWidth,
-    'height': firstLetterHeight
-  });
+        planet.css('top', firstLetterPosition.top + (firstLetterHeight / 3));
 
-  $('#first-letter-clone').css(firstLetterPosition);
+        $('#first-letter-clone').css({
+            'width': firstLetterWidth,
+            'height': firstLetterHeight
+        });
 
-  $('#letter-circle-clone').css({
-    'width': letterCircleWidth,
-    'height': letterCircleHeight
-  });
+        $('#first-letter-clone').css(firstLetterPosition);
 
-  $(window).resize(function () {
-    firstLetterWidth = firstLetter[0].getBoundingClientRect().width;
-    firstLetterHeight = firstLetter[0].getBoundingClientRect().height;
-    firstLetterPosition = firstLetter.offset();
-    letterCircleWidth = letterCircle[0].getBoundingClientRect().width;
-    letterCircleHeight = letterCircle[0].getBoundingClientRect().height;
-    letterCirclePosition = letterCircle.offset();
+        $('#letter-circle-clone').css({
+            'width': letterCircleWidth,
+            'height': letterCircleHeight
+        });
 
-    planet.css('top', firstLetterPosition.top + (firstLetterHeight / 3));
+        $(window).resize(function () {
+            firstLetterWidth = firstLetter[0].getBoundingClientRect().width;
+            firstLetterHeight = firstLetter[0].getBoundingClientRect().height;
+            firstLetterPosition = firstLetter.offset();
+            letterCircleWidth = letterCircle[0].getBoundingClientRect().width;
+            letterCircleHeight = letterCircle[0].getBoundingClientRect().height;
+            letterCirclePosition = letterCircle.offset();
 
-    $('#first-letter-clone').css({
-      'width': firstLetterWidth,
-      'height': firstLetterHeight
-    });
-    $('#first-letter-clone').css(firstLetterPosition);
+            planet.css('top', firstLetterPosition.top + (firstLetterHeight / 3));
 
-    $('#letter-circle-clone').css({
-      'width': letterCircleWidth,
-      'height': letterCircleHeight
-    });
-  });
+            $('#first-letter-clone').css({
+                'width': firstLetterWidth,
+                'height': firstLetterHeight
+            });
+
+            $('#first-letter-clone').css(firstLetterPosition);
+
+            $('#letter-circle-clone').css({
+                'width': letterCircleWidth,
+                'height': letterCircleHeight
+            });
+        });
+    }
+
 });

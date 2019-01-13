@@ -36,6 +36,7 @@ html(class='no-js  page', lang='ru')
     noscript У вас отключен JavaScript. Это пугает.
 
     .page__inner(id='page-inner')
+      .page__bg#particles
       .page__content
         block page
           block header
@@ -43,8 +44,8 @@ html(class='no-js  page', lang='ru')
           main
             block content
 
-          .page__footer-wrapper
-            block footer
+      .page__footer-wrapper
+        block footer
 
     block modals
 

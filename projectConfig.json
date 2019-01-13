@@ -22,7 +22,9 @@
     "nav-toggler": [],
     "modal": [],
     "contact-form": [],
-    "field-text": []
+    "field-text": [],
+    "newcomers": [],
+    "about": []
   },
   "addCssBefore": [
     "./../../node_modules/magic.css/magic.css",
