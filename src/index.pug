@@ -100,12 +100,13 @@ block page
             use(xlink:href='img/sprite-svg.svg#icon-heart')
           span Себе
 
-  block footer
-    footer.page-footer
-      .page-footer__inner
-        .page-footer__text OXYO&nbsp;
-          a.green(href='/') вечно
+block footer
+  footer.page-footer
+    .page-footer__inner
+      .page-footer__text OXYO&nbsp;
+        a.green(href='/') вечно
 
+block modals
   +modal('contact-modal')
     h4.modal__title.modal__title--ufo Ульракороткая, но&nbsp;мегаконверсионная форма захвата
     +contact-form()

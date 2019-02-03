@@ -1,0 +1,28 @@
+extends pug/layout.pug
+
+block meta
+    title О нас
+    meta(name='description', content='')
+block page
+    block header
+        header.page-header
+            .page-header__inner
+                +greeting('Знакомьтесь', 'img/sprite-svg.svg#icon-alien', true)
+                +nav-toggler('Показать главное меню', 'main-nav', 'main-nav--visible')
+                +main-nav()
+                    ul.main-nav__list
+                        +main-nav-item('about-us.html', 'Мы')
+                        +main-nav-item('portfolio.html', 'Работа')
+                        +main-nav-item('contacts.html', 'Контакты')
+
+    block content
+        +about()
+        +newcomers()
+
+
+
+block footer
+    footer.page-footer
+        .page-footer__inner
+            .page-footer__text OXYO&nbsp;
+                a.green(href='/') вечно

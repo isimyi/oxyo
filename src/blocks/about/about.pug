@@ -1,0 +1,59 @@
+//- Все примеси в этом файле должны начинаться c имени блока (about)
+
+mixin about(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +about('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' about--' + modsList[i].trim();
+      }
+    }
+
+  .about(class=allMods)&attributes(attributes)
+    .about__inner!= text
+      h1.about__title Незаменимые
+        br
+        span.green есть
+      section.about__cards
+        .about__card
+          .about__photo
+            img(src='img/about-card-01.png')
+          .about__descr
+            article.about__text
+              h2.about__subtitle Виктор Улаев
+              p.about__note Артистичный директор
+              p
+                | Сколько волка хлебом не корми, а он всё-равно на мясо смотреть будет. Этим принципом я руководствуюсь
+                | в работе и личной жизни.
+                | Именно поэтому мення недолюливают веганы, да и не только.
+        .about__card.about__card--ui
+          .about__photo
+            img(src='img/about-card-02.png')
+          .about__descr
+            article.about__text
+              h2.about__subtitle Кристина Ковач
+              p.about__note Директор по верстке
+              p
+                | Верстать-колотить, сказала я, увидев этот сайт. А послушав пожелания по анимации и вообще
+                | чуть не&nbsp;ОХУО. Ну что-ж, мне не привыкать. Как говорится, не нужно быть богом, чтобы
+                | завязать шнурки. И пить.
+        .about__card.about__card--back
+          .about__photo
+            img(src='img/about-card-03.png')
+          .about__descr
+            article.about__text
+              h2.about__subtitle Денис Басов
+              p.about__note Президент по программированию
+              p
+                | Кодинг-шмодинг, все дела. Ла-ла-ла, ла-ла-ла. Как вы уже поняли, больше всего на свете я
+                | люблю писать песни про программирование. Надеюсь когда-нибудь начну этим зарабатывать
+                | себе на жизнь. Но вряд-ли.

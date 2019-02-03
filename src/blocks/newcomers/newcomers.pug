@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (newcomers)
+
+mixin newcomers(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +newcomers('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' newcomers--' + modsList[i].trim();
+      }
+    }
+
+  .newcomers(class=allMods)&attributes(attributes)
+    .newcomers__inner!= text
