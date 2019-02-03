@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta content="notranslate" name="google">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#5bbad5">
+  <meta name="theme-color" content="#000">
+  <meta name="msapplication-navbutton-color" content="#000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+  <title>О нас</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if (isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if (typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--' + key;
+            if (typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if (isMobile[key][type]) rootClasses += ' is-mobile--' + key + '-' + type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      } else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+</head>
+
+<body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
+  <div class="page__inner" id="page-inner">
+    <div class="page__bg" id="particles"></div>
+    <div class="page__content">
+      <header class="page-header">
+        <div class="page-header__inner"><button class="greeting"><svg class="greeting__icon"><use xlink:href="img/sprite-svg.svg#icon-alien"></use></svg><div class="greeting__title">Знакомьтесь</div></button><button class="nav-toggler" aria-label="Показать главное меню" data-target-id="main-nav" data-target-class-toggle="main-nav--visible"><div>Показать главное меню</div></button>
+          <nav class="main-nav" id="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="about-us.html">Мы</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="portfolio.html">Работа</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="about">
+        <div class="about__inner">
+          <h1 class="about__title">Незаменимые<br/><span class="green">есть</span></h1>
+
+          <section class="about__cards">
+            <div class="about__card">
+              <div class="about__photo"><img src="img/about-card-01.png" /></div>
+              <div class="about__descr">
+
+                <article class="about__text">
+                  <h2 class="about__subtitle">Виктор Улаев</h2>
+                  <p class="about__note">Артистичный директор</p>
+                  <p>Сколько волка хлебом не корми, а он всё-равно на мясо смотреть будет. Этим принципом я руководствуюсь в работе и личной жизни. Именно поэтому мення недолюливают веганы, да и не только.</p>
+                </article>
+
+              </div>
+            </div>
+            <div class="about__card about__card--ui">
+              <div class="about__photo"><img src="img/about-card-02.png" /></div>
+              <div class="about__descr">
+
+                <article class="about__text">
+                  <h2 class="about__subtitle">Кристина Ковач</h2>
+                  <p class="about__note">Директор по верстке</p>
+                  <p>Верстать-колотить, сказала я, увидев этот сайт. А послушав пожелания по анимации и вообще чуть не&nbsp;ОХУО. Ну что-ж, мне не привыкать. Как говорится, не нужно быть богом, чтобы завязать шнурки. И пить.</p>
+                </article>
+
+              </div>
+            </div>
+            <div class="about__card about__card--back">
+              <div class="about__photo"><img src="img/about-card-03.png" /></div>
+              <div class="about__descr">
+
+                <article class="about__text">
+                  <h2 class="about__subtitle">Денис Басов</h2>
+                  <p class="about__note">Президент по программированию</p>
+                  <p>Кодинг-шмодинг, все дела. Ла-ла-ла, ла-ла-ла. Как вы уже поняли, больше всего на свете я люблю писать песни про программирование. Надеюсь когда-нибудь начну этим зарабатывать себе на жизнь. Но вряд-ли.</p>
+                </article>
+
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+      <div class="newcomers">
+        <div class="newcomers__inner"></div>
+      </div>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer">
+        <div class="page-footer__inner">
+          <div class="page-footer__text">OXYO&nbsp;<a class="green" href="/">вечно</a></div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

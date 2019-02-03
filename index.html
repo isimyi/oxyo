@@ -48,8 +48,8 @@
 
 <body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
   <div class="page__inner" id="page-inner">
+    <div class="page__bg" id="particles"></div>
     <div class="page__content">
-      <div class="page__bg" id="particles"></div>
       <header class="page-header page-header--absolute">
         <div class="page-header__inner"><button class="greeting" id="home-greeting"><svg class="greeting__icon"><use xlink:href="img/sprite-svg.svg#icon-hand"></use></svg><div class="greeting__title">Привет</div></button><button class="nav-toggler" aria-label="Показать главное меню" data-target-id="main-nav" data-target-class-toggle="main-nav--visible"><div>Показать главное меню</div></button>
           <nav class="main-nav" id="main-nav">
@@ -136,22 +136,24 @@
             </svg><span>Себе</span></a>
         </div>
       </div>
+    </div>
+    <div class="page__footer-wrapper">
       <footer class="page-footer">
         <div class="page-footer__inner">
           <div class="page-footer__text">OXYO&nbsp;<a class="green" href="/">вечно</a></div>
         </div>
       </footer>
-      <div class="modal mfp-hide" id="contact-modal" tabindex="-1" role="dialog">
-        <div class="modal__dialog" role="document">
-          <h4 class="modal__title modal__title--ufo">Ульракороткая, но&nbsp;мегаконверсионная форма захвата</h4>
-          <form class="contact-form">
-            <fieldset class="contact-form__fields"><label class="field-text"><span class="field-text__input-wrap"><input class="field-text__input" type="text" value="" name="user-name" placeholder="Представьтесь"/></span></label><label class="field-text"><span class="field-text__input-wrap"><input class="field-text__input" type="text" value="" name="phone" placeholder="Телефон"/></span></label>
-              <p class="contact-form__note">Нажимая на «ПУСК», вы соглашаетесь на&nbsp;обработку&nbsp;<a class="green" href="/">персональных данных.</a><br>А можно ни на что не соглашаться, ничего не заполнять и&nbsp;просто написать нам в&nbsp;<a class="green bold" href="/">телеграм</a></p>
-            </fieldset>
-            <div class="contact-form__submit"><input class="btn  btn--round" value="Пуск" type="button" /></div>
-          </form>
-        </div>
-      </div>
+    </div>
+  </div>
+  <div class="modal mfp-hide" id="contact-modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <h4 class="modal__title modal__title--ufo">Ульракороткая, но&nbsp;мегаконверсионная форма захвата</h4>
+      <form class="contact-form">
+        <fieldset class="contact-form__fields"><label class="field-text"><div class="field-text__input-wrap"><input class="field-text__input" type="text" value="" name="user-name" placeholder="Представьтесь"/><span class="field-text__focus-border"></span></div></label><label class="field-text"><div class="field-text__input-wrap"><input class="field-text__input" type="text" value="" name="phone" placeholder="Телефон"/><span class="field-text__focus-border"></span></div></label>
+          <p class="contact-form__note">Нажимая на «ПУСК», вы соглашаетесь на&nbsp;обработку&nbsp;<a class="green" href="/">персональных данных.</a><br>А можно ни на что не соглашаться, ничего не заполнять и&nbsp;просто написать нам в&nbsp;<a class="green bold" href="/">телеграм</a></p>
+        </fieldset>
+        <div class="contact-form__submit"><input class="btn  btn--round" value="Пуск" type="button" /></div>
+      </form>
     </div>
   </div>
   <script src="js/script.min.js"></script>
